@@ -3,8 +3,7 @@
  *   All rights reserved.
  *   Unauthorized use, reproduction, and distribution of this source code is strictly prohibited.
  */
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import stripJsonComments from 'strip-json-comments';
 
-console.log(add(3, 5)); //output: 8
+
+const frameworkConfig = JSON.parse(stripJsonComments(LoadResourceFile(GetCurrentResourceName(), 'config.json')));
