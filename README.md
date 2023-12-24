@@ -7,6 +7,12 @@ This library allows you to easily interact with the servers framework, without w
 npm install @garmingo/framework-js-client
 ```
 
+## Supported Frameworks
+ * ESX Legacy
+ * ESX Infinity
+ * QBCore
+ * Custom implementations
+
 ## Usage
 ```typescript
 import { Framework } from '@garmingo/framework-js-client';
