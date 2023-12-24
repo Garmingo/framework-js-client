@@ -21,6 +21,7 @@ framework.getPlayerJobGrade();
 
 ## Docs
 [Project setup and usage](https://docs.garmingo.com/purchase-and-installation/frameworks)
+
 [Type reference](https://tsdocs.dev/docs/@garmingo/framework-js-client/)
 
 ## Other packages
