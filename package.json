@@ -1,7 +1,7 @@
 {
   "name": "@garmingo/framework-js-client",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript version of Framework library (client version)",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
