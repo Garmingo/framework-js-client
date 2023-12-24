@@ -19,6 +19,9 @@ framework.getPlayerJobGrade();
 ```
 
 
-## License
+## Docs
+https://docs.garmingo.com/purchase-and-installation/frameworks
 
-https://github.com/Garmingo/Framework-Library/blob/main/LICENSE.md
+## Other packages
+https://github.com/Garmingo/framework-js-server
+https://github.com/Garmingo/FrameworkLibraryNET
