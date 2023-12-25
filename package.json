@@ -1,7 +1,6 @@
 {
   "name": "@garmingo/framework-js-client",
-  "private": false,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "TypeScript version of Framework library (client version)",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -16,6 +15,11 @@
   },
   "author": "Garmingo",
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Garmingo/framework-js-client.git"
+  },
+  "homepage": "https://github.com/Garmingo/framework-js-client",
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "@citizenfx/client": "^2.0.7255-1",
