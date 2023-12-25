@@ -7,6 +7,12 @@ This library allows you to easily interact with the servers framework, without w
 npm install @garmingo/framework-js-client
 ```
 
+## Supported Frameworks
+ * ESX Legacy
+ * ESX Infinity
+ * QBCore
+ * Custom implementations
+
 ## Usage
 ```typescript
 import { Framework } from '@garmingo/framework-js-client';
@@ -19,6 +25,14 @@ framework.getPlayerJobGrade();
 ```
 
 
-## License
+## Docs
+[Project setup and usage](https://docs.garmingo.com/purchase-and-installation/frameworks)
 
-https://github.com/Garmingo/Framework-Library/blob/main/LICENSE.md
+[Type reference](https://tsdocs.dev/docs/@garmingo/framework-js-client/)
+
+## Other packages
+https://github.com/Garmingo/framework-js-server
+
+https://github.com/Garmingo/FrameworkLibraryNET
+
+https://github.com/Garmingo/framework-lua
