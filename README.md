@@ -1,6 +1,9 @@
 # FiveM Framework Library (client-side)
 This library allows you to easily interact with the servers framework, without writing the same code over and over again for each framework.
 
+[![YouTube Video](https://img.youtube.com/vi/jGhmhYDtU8g/0.jpg)](https://www.youtube.com/watch?v=jGhmhYDtU8g)
+
+
 ## Installation
 
 ```bash
