@@ -39,3 +39,6 @@ https://github.com/Garmingo/framework-js-server
 https://github.com/Garmingo/FrameworkLibraryNET
 
 https://github.com/Garmingo/framework-lua
+
+## Contact Us
+Discord: https://discord.gg/c7UQ2ca
