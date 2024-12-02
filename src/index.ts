@@ -12,6 +12,14 @@ export type FrameworkConfig = {
   ExportResource: string;
 };
 
+/**
+ * Global EXPORTS
+ *
+ * @remarks
+ * This is a workaround to force accessing the global EXPORTS object instead of creating local ones in certain build tools.
+ */
+const EXPORTS = global.exports;
+
 export class Framework {
   private config: FrameworkConfig;
   private framework: any;
@@ -43,7 +51,7 @@ export class Framework {
     while (!this.framework) {
       switch (this.config.Framework) {
         case "ESX Legacy":
-          this.framework = exports.es_extended.getSharedObject();
+          this.framework = EXPORTS.es_extended.getSharedObject();
           break;
         case "ESX Infinity":
           emit(this.config.ESXEvent, (obj: any) => {
@@ -51,7 +59,7 @@ export class Framework {
           });
           break;
         case "QBCore":
-          this.framework = exports["qb-core"]["GetCoreObject"]();
+          this.framework = EXPORTS["qb-core"]["GetCoreObject"]();
           break;
         case "Custom":
           this.framework = {};
@@ -106,12 +114,11 @@ export class Framework {
       case "QBCore":
         return this.framework.functions.GetPlayerData().job.name;
       case "Custom":
-        return exports[this.config.ExportResource].GetPlayerJobName();
+        return EXPORTS[this.config.ExportResource].GetPlayerJobName();
       default:
         return "";
     }
   }
-
 
   /**
    * Returns the grade of the players job
@@ -126,7 +133,7 @@ export class Framework {
       case "QBCore":
         return this.framework.functions.GetPlayerData().job.grade;
       case "Custom":
-        return exports[this.config.ExportResource].GetPlayerJobGrade();
+        return EXPORTS[this.config.ExportResource].GetPlayerJobGrade();
       default:
         return 0;
     }
@@ -154,9 +161,11 @@ export class Framework {
         }
         return 0;
       case "QBCore":
-        return this.framework.Functions.GetPlayerData().Functions.GetItemsByName(item).amount;
+        return this.framework.Functions.GetPlayerData().Functions.GetItemsByName(
+          item
+        ).amount;
       case "Custom":
-        return exports[this.config.ExportResource].GetInventoryItemCount(item);
+        return EXPORTS[this.config.ExportResource].GetInventoryItemCount(item);
       default:
         return 0;
     }
@@ -168,9 +177,8 @@ export class Framework {
    * @param plate car plate
    */
   public addCarKeys(plate: string) {
-    if (this.config.Framework === 'QBCore') {
+    if (this.config.Framework === "QBCore") {
       emit("qb-vehiclekeys:client:AddKeys", plate);
     }
   }
-
 }
