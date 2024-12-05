@@ -67,6 +67,8 @@ export class Framework {
       }
     }
     /* -- Initialize Framework -- */
+
+    console.log("Framework initialized successfully.");
   }
 
   /**
